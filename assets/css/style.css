@@ -1,0 +1,295 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg-grey: #d3d3d3;
+  --bg-blue: #4682b4;
+  --white: #fff;
+  --letter-footer: #2DABC1;
+  --poppins: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-bottom: 0;
+}
+
+body {
+  font-family: var(--poppins);
+  font-size: 12px;
+}
+
+.btn {
+  font-size: 12px;
+}
+.bg-grey {
+  background-color: var(--bg-grey);
+}
+
+.section-title {
+  background-color: var(--bg-blue);
+  color: white;
+  padding: 10px 15px;
+  font-weight: 600;
+}
+
+.form-label {
+    font-weight: 600;
+}
+
+.bg-blue {
+    background-color: var(--bg-blue);
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link {
+  color: var(--bg-blue);
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+  border-top: 3px solid var(--bg-blue);
+}
+
+.nav-link {
+  font-weight: 900;
+}
+
+button.bg-blue {
+  color: var(--white);
+}
+
+button.bg-blue:hover {
+  color: var(--white);
+  background-color: #0666b7;
+}
+
+.card {
+    border-color: var(--bg-blue);
+}
+
+.step {
+  background-color: var(--bg-grey); 
+  padding: 10px 15px;
+  font-weight: 600;
+}
+
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.icon {
+  margin-right: 10px;
+}
+
+.wrapper {
+  display: flex;
+}
+
+.main {
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  transition: all 0.35s ease-in-out;
+  background-color: #fafbfe;
+  margin-top: 45px;
+}
+
+#sidebar {
+  width: 70px;
+  min-width: 70px;
+  z-index: 1000;
+  transition: all 0.25s ease-in-out;
+  flex-direction: column;
+  display: flex;
+  background-color: var(--bg-blue);
+}
+
+#sidebar.expand {
+  width: 260px;
+  min-width: 260px;
+}
+
+.position-head {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 70px;
+  z-index: 1000;
+  transition: all 0.2s ease-out;
+}
+
+.position-head.sidebar-collapsed {
+  left: 70px;
+}
+
+.position-head.sidebar-expanded {
+  left: 260px;
+}
+
+.toggle-btn {
+  background-color: transparent;
+  cursor: pointer;
+  border: 0;
+  padding: 1rem 1.5rem;
+}
+
+.toggle-btn i {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.sidebar-logo {
+  margin: auto 0;
+}
+
+.sidebar-logo a {
+  color: #fff;
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+#sidebar:not(.expand) .sidebar-logo,
+#sidebar:not(.expand) a.sidebar-link span {
+  display: none;
+}
+
+.sidebar-nav {
+  padding: 2rem 0;
+  flex: 1 1 auto;
+}
+
+a.sidebar-link {
+  padding: 0.625rem 1.625rem;
+  color: #fff;
+  display: block;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  border-left: 3px solid transparent;
+}
+
+.sidebar-link i {
+  font-size: 1.1rem;
+  margin-right: 0.75rem;
+}
+
+a.sidebar-link:hover {
+  background-color: rgba(255, 255, 255, 0.075);
+  border-left: 3px solid #3b7ddd;
+}
+
+.sidebar-item {
+  position: relative;
+}
+
+.sidebar-footer {
+  display: none;
+  position: fixed;
+  bottom: 0;
+}
+
+#sidebar:not(.expand) .sidebar-item .sidebar-dropdown {
+  position: absolute;
+  top: 0;
+  left: 70px;
+  background-color: #0e2238;
+  padding: 0;
+  min-width: 15rem;
+  display: none;
+}
+
+/* Mostrar submenu */
+/* #sidebar:not(.expand) .sidebar-item:hover .has-dropdown + .sidebar-dropdown {
+  display: block;
+  max-height: 15em;
+  width: 100%;
+  opacity: 1;
+} */
+
+#sidebar.expand .sidebar-link[data-bs-toggle="collapse"]::after {
+  border: solid;
+  border-width: 0 0.075rem 0.075rem 0;
+  content: "";
+  display: inline-block;
+  padding: 2px;
+  position: absolute;
+  right: 1.5rem;
+  top: 1.4rem;
+  transform: rotate(-135deg);
+  transition: all 0.2s ease-out;
+}
+
+#sidebar.expand .sidebar-link[data-bs-toggle="collapse"].collapsed::after {
+  transform: rotate(45deg);
+  transition: all 0.2s ease-out;
+}
+
+.btn-major {
+  color: #2dabc1;
+}
+
+.bold {
+  font-weight: 900;
+}
+
+footer span {
+  color: var(--letter-footer);
+  font-weight: 900;
+  font-size: 15px;
+}
+
+@media only screen and (max-width: 767px) {
+  .sidebar-footer {
+    display: block;
+  }
+
+  #nabvar-header {
+    display: none;
+  }
+
+  #sidebar {
+    width: 70px;
+    min-width: 70px;
+  }
+  
+  #sidebar.expand {
+    width: 190px;
+    min-width: 190px;
+  }
+
+  .position-head.sidebar-expanded {
+    left: 190px;
+  }
+
+  .form-search {
+    margin-bottom: 10px;
+  }
+
+  a.sidebar-link {
+    font-size: 0.5rem;
+    padding: 0.325rem 1.25rem;
+  }
+
+  #sidebar.expand .sidebar-link[data-bs-toggle="collapse"]::after {
+    top: 0.9rem;
+  }
+}
+
+  /* #sidebar {
+    position: fixed;
+    height: 100%;
+  } */

@@ -11,8 +11,8 @@
   <!-- CDN FontAwesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
   <link rel="stylesheet" href="./assets/css/style.css" />
+  <script type="module" src="./assets/js/main.js"></script>
 </head>
-
 <body>
   <div class="wrapper">
     <aside id="sidebar">
@@ -179,412 +179,414 @@
       </div>
     </aside>
     <div class="main p-3">
-      <nav class="navbar navbar-inverse bg-grey position-head">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#"><img src="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo.svg"
-              alt="PSC" title="PSC" width="30" height="24" /></a>
-          <ul id="nabvar-header" class="nav navbar-right">
-            <li class="bold">
-              <i class="fa-solid fa-user fa-sm"></i>
-              Usuario: 79944797
-            </li>
-            &nbsp;-&nbsp;
-            <a href="#">
-              <li class="btn-major">
-                <i class="fa-solid fa-house"></i>
-                Home
+      <div class="content">
+        <nav class="navbar navbar-inverse bg-grey position-head">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo.svg"
+                alt="PSC" title="PSC" width="30" height="24" /></a>
+            <ul id="nabvar-header" class="nav navbar-right">
+              <li class="bold">
+                <i class="fa-solid fa-user fa-sm"></i>
+                Usuario: 79944797
               </li>
-            </a>
-            &nbsp;-&nbsp;
-            <a href="#">
-              <li class="btn-major">
-                <i class="fa-solid fa-right-from-bracket"></i>
-                Cerrar Sesión
-              </li>
-            </a>
-          </ul>
-        </div>
-      </nav>
-      <section class="mb-2">
-        <div class="row mb-3">
-          <div class="col-12 section-title d-flex align-items-center">
-            <i class="fas fa-file-alt fa-2xl icon"></i>
-            <span>PRESUPUESTOS - VARIABLES COMERCIALES</span>
+              &nbsp;-&nbsp;
+              <a href="#">
+                <li class="btn-major">
+                  <i class="fa-solid fa-house"></i>
+                  Home
+                </li>
+              </a>
+              &nbsp;-&nbsp;
+              <a href="#">
+                <li class="btn-major">
+                  <i class="fa-solid fa-right-from-bracket"></i>
+                  Cerrar Sesión
+                </li>
+              </a>
+            </ul>
           </div>
-        </div>
-        <div class="row mt-1">
-          <div class="col-12 step">
-            <span>1 SELECCIÓN LINEA</span>
-          </div>
-        </div>
-      </section>
-      <section class="mb-3">
-        <div class="card">
-          <div class="row mb-3 mt-3">
-            <div class="col-md-6 row form-search">
-              <div class="col-md-3">
-                <label for="year" class="form-label">Año:</label>
-                <select class="form-select form-select-sm" id="year" name="year">
-                  <option value="">2025</option>
-                  <option value="">2026</option>
-                  <option value="">2027</option>
-                </select>
-              </div>
-              <div class="col-md-6">
-                <label for="line" class="form-label">Línea:</label>
-                <select class="form-select form-select-sm" id="line" name="line">
-                  <option value="" selected>RENAULT</option>
-                  <option value="">MERCEDES BENZ</option>
-                  <option value="">BYD</option>
-                </select>
-              </div>
-              <div class="col-md-3">
-                <label for="budget" class="form-label">Presupuesto:</label>
-                <select class="form-select form-select-sm" id="budget" name="budget">
-                  <option value="">Base</option>
-                </select>
-              </div>
-            </div>
-            <div class="col-md-6 d-flex align-items-end justify-content-end col-12">
-              <div class="col-12 col-md-6">
-                <button class="btn btn-sm bg-blue w-100">
-                  <i class="fa-solid fa-magnifying-glass"></i>
-                  Generar
-                </button>
-              </div>
+        </nav>
+        <section class="mb-2">
+          <div class="row mb-3">
+            <div class="col-12 section-title d-flex align-items-center">
+              <i class="fas fa-file-alt fa-2xl icon"></i>
+              <span>PRESUPUESTOS - VARIABLES COMERCIALES</span>
             </div>
           </div>
-          <ul class="nav nav-tabs mb-3" id="tab">
-            <li class="nav-item">
-              <button class="nav-link active" id="one-tab" data-bs-toggle="tab" data-bs-target="#one" type="button"
-                role="tab" aria-controls="one" aria-selected="true">
-                Vehículos Nuevos
-              </button>
-            </li>
-            <li class="nav-item">
-              <button class="nav-link" id="two-tab" data-bs-toggle="tab" data-bs-target="#two" type="button" role="tab"
-                aria-controls="two" aria-selected="false">
-                Vehículos Usados
-              </button>
-            </li>
-            <li class="nav-item">
-              <button class="nav-link" id="three-tab" data-bs-toggle="tab" data-bs-target="#three" type="button"
-                role="tab" aria-controls="three" aria-selected="false">
-                Repuestos
-              </button>
-            </li>
-            <li class="nav-item">
-              <button class="nav-link" id="four-tab" data-bs-toggle="tab" data-bs-target="#four" type="button"
-                role="tab" aria-controls="four" aria-selected="false">
-                Servicios
-              </button>
-            </li>
-            <li class="nav-item">
-              <button class="nav-link" id="five-tab" data-bs-toggle="tab" data-bs-target="#five" type="button"
-                role="tab" aria-controls="five" aria-selected="false">
-                Variables Macro y P&G
-              </button>
-            </li>
-          </ul>
-          <div class="tab-content" id="myTabContent">
-            <div class="tab-pane fade show active" id="one" role="tabpanel" aria-labelledby="home-tab">
-              <div class="row">
+          <div class="row mt-1">
+            <div class="col-12 step">
+              <span>1 SELECCIÓN LINEA</span>
+            </div>
+          </div>
+        </section>
+        <section class="mb-3">
+          <div class="card">
+            <div class="row mb-3 mt-3">
+              <div class="col-md-6 row form-search">
                 <div class="col-md-3">
-                  <div class="form-group row mb-2">
-                    <label class="col-md-6 col-form-label">TOTAL INDUSTRIA:</label>
-                    <div class="col-md-6">
-                      <input type="text" class="form-control form-control-sm" value="190.000" />
-                    </div>
-                  </div>
-                  <div class="form-group row mb-2">
-                    <label class="col-md-6 col-form-label">% PARTICIPACIÓN:</label>
-                    <div class="col-md-6">
-                      <input type="text" class="form-control form-control-sm" value="19,00" />
-                    </div>
-                  </div>
-                  <div class="form-group row mb-2">
-                    <label class="col-md-6 col-form-label">% PESO COMERCIAL:</label>
-                    <div class="col-md-6">
-                      <input type="text" class="form-control form-control-sm" value="11,00" />
-                    </div>
-                  </div>
-                  <div class="form-group row mb-2">
-                    <label class="col-md-6 col-form-label">% MARGEN NUEVOS:</label>
-                    <div class="col-md-6">
-                      <input type="text" class="form-control form-control-sm" value="9,00" />
-                    </div>
-                  </div>
-                  <div class="col-md-12">
-                    <button class="btn bg-blue mt-2 w-100">
-                      <i class="fa-solid fa-floppy-disk"></i> Guardar
-                    </button>
-                  </div>
-                </div>
-                <div class="col-md-3">
-                  <div class="form-group row mb-2">
-                    <label class="col-md-6 col-form-label">UNIDADES FABRICA:</label>
-                    <div class="col-md-6">
-                      <input type="text" class="form-control form-control-sm" value="36.100" />
-                    </div>
-                  </div>
-                  <div class="form-group row mb-2">
-                    <label class="col-md-6 col-form-label">UNIDADES COMPAÑÍA:</label>
-                    <div class="col-md-6">
-                      <input type="text" class="form-control form-control-sm" value="3.971" />
-                    </div>
-                  </div>
+                  <label for="year" class="form-label">Año:</label>
+                  <select class="form-select form-select-sm" id="year" name="year">
+                    <option value="">2025</option>
+                    <option value="">2026</option>
+                    <option value="">2027</option>
+                  </select>
                 </div>
                 <div class="col-md-6">
+                  <label for="line" class="form-label">Línea:</label>
+                  <select class="form-select form-select-sm" id="line" name="line">
+                    <option value="" selected>RENAULT</option>
+                    <option value="">MERCEDES BENZ</option>
+                    <option value="">BYD</option>
+                  </select>
+                </div>
+                <div class="col-md-3">
+                  <label for="budget" class="form-label">Presupuesto:</label>
+                  <select class="form-select form-select-sm" id="budget" name="budget">
+                    <option value="">Base</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-6 d-flex align-items-end justify-content-end col-12">
+                <div class="col-12 col-md-6">
+                  <button class="btn btn-sm bg-blue w-100">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    Generar
+                  </button>
+                </div>
+              </div>
+            </div>
+            <ul class="nav nav-tabs mb-3" id="tab">
+              <li class="nav-item">
+                <button class="nav-link active" id="one-tab" data-bs-toggle="tab" data-bs-target="#one" type="button"
+                  role="tab" aria-controls="one" aria-selected="true">
+                  Vehículos Nuevos
+                </button>
+              </li>
+              <li class="nav-item">
+                <button class="nav-link" id="two-tab" data-bs-toggle="tab" data-bs-target="#two" type="button" role="tab"
+                  aria-controls="two" aria-selected="false">
+                  Vehículos Usados
+                </button>
+              </li>
+              <li class="nav-item">
+                <button class="nav-link" id="three-tab" data-bs-toggle="tab" data-bs-target="#three" type="button"
+                  role="tab" aria-controls="three" aria-selected="false">
+                  Repuestos
+                </button>
+              </li>
+              <li class="nav-item">
+                <button class="nav-link" id="four-tab" data-bs-toggle="tab" data-bs-target="#four" type="button"
+                  role="tab" aria-controls="four" aria-selected="false">
+                  Servicios
+                </button>
+              </li>
+              <li class="nav-item">
+                <button class="nav-link" id="five-tab" data-bs-toggle="tab" data-bs-target="#five" type="button"
+                  role="tab" aria-controls="five" aria-selected="false">
+                  Variables Macro y P&G
+                </button>
+              </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+              <div class="tab-pane fade show active" id="one" role="tabpanel" aria-labelledby="home-tab">
+                <div class="row">
+                  <div class="col-md-3">
+                    <div class="form-group row mb-2">
+                      <label class="col-md-6 col-form-label">TOTAL INDUSTRIA:</label>
+                      <div class="col-md-6">
+                        <input type="text" class="form-control form-control-sm" value="190.000" />
+                      </div>
+                    </div>
+                    <div class="form-group row mb-2">
+                      <label class="col-md-6 col-form-label">% PARTICIPACIÓN:</label>
+                      <div class="col-md-6">
+                        <input type="text" class="form-control form-control-sm" value="19,00" />
+                      </div>
+                    </div>
+                    <div class="form-group row mb-2">
+                      <label class="col-md-6 col-form-label">% PESO COMERCIAL:</label>
+                      <div class="col-md-6">
+                        <input type="text" class="form-control form-control-sm" value="11,00" />
+                      </div>
+                    </div>
+                    <div class="form-group row mb-2">
+                      <label class="col-md-6 col-form-label">% MARGEN NUEVOS:</label>
+                      <div class="col-md-6">
+                        <input type="text" class="form-control form-control-sm" value="9,00" />
+                      </div>
+                    </div>
+                    <div class="col-md-12">
+                      <button class="btn bg-blue mt-2 w-100">
+                        <i class="fa-solid fa-floppy-disk"></i> Guardar
+                      </button>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="form-group row mb-2">
+                      <label class="col-md-6 col-form-label">UNIDADES FABRICA:</label>
+                      <div class="col-md-6">
+                        <input type="text" class="form-control form-control-sm" value="36.100" />
+                      </div>
+                    </div>
+                    <div class="form-group row mb-2">
+                      <label class="col-md-6 col-form-label">UNIDADES COMPAÑÍA:</label>
+                      <div class="col-md-6">
+                        <input type="text" class="form-control form-control-sm" value="3.971" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="table-responsive">
+                      <table class="table table-sm">
+                        <thead class="table-light">
+                          <tr class="table-active">
+                            <th>CENTRO</th>
+                            <th>% PARTICIPACIÓN</th>
+                            <th>Q AÑO</th>
+                            <th>Q MES</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>RN-Bta-P.Aranda</td>
+                            <td>
+                              <input type="text" class="form-control form-control-sm" value="35,00" />
+                            </td>
+                            <td>
+                              <input type="text" class="form-control form-control-sm" value="1.390" />
+                            </td>
+                            <td>
+                              <input type="text" class="form-control form-control-sm" value="116" />
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>RN-Bta-San Fernando</td>
+                            <td>
+                              <input type="text" class="form-control form-control-sm" value="10,00" />
+                            </td>
+                            <td>
+                              <input type="text" class="form-control form-control-sm" value="398" />
+                            </td>
+                            <td>
+                              <input type="text" class="form-control form-control-sm" value="34" />
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
                   <div class="table-responsive">
-                    <table class="table table-sm">
-                      <thead class="table-light">
-                        <tr class="table-active">
-                          <th>CENTRO</th>
-                          <th>% PARTICIPACIÓN</th>
-                          <th>Q AÑO</th>
-                          <th>Q MES</th>
+                    <table class="mt-3 table table-striped">
+                      <thead>
+                        <tr>
+                          <th scope="col">Referencia de Carro</th>
+                          <th scope="col">Tipo</th>
+                          <th scope="col">Precio 1</th>
+                          <th scope="col">Precio 2</th>
+                          <th scope="col">Precio 3</th>
+                          <th scope="col">Precio 4</th>
+                          <th scope="col">Precio 5</th>
+                          <th scope="col">Precio 6</th>
+                          <th scope="col">Precio 7</th>
+                          <th scope="col">Precio 8</th>
+                          <th scope="col">Precio 9</th>
+                          <th scope="col">Precio 10</th>
+                          <th scope="col">Precio 11</th>
+                          <th scope="col">Precio 12</th>
+                          <th scope="col">Precio 13</th>
+                          <th scope="col">Precio 14</th>
+                          <th scope="col">Eliminar</th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
-                          <td>RN-Bta-P.Aranda</td>
+                          <th scope="row">Toyota Corolla</th>
+                          <td>Gasolina</td>
                           <td>
-                            <input type="text" class="form-control form-control-sm" value="35,00" />
+                            <input type="text" name="" id="" class="form-control form-control-sm" value="$21,000" />
                           </td>
                           <td>
-                            <input type="text" class="form-control form-control-sm" value="1.390" />
+                            <a href=""><i class="fa-solid fa-rotate"></i></a>
                           </td>
+                          <td>$21,000</td>
+                          <td>$20,250</td>
+                          <td>$19,800</td>
+                          <td>$20,600</td>
+                          <td>$21,200</td>
+                          <td>$20,900</td>
+                          <td>$20,450</td>
+                          <td>$20,100</td>
+                          <td>$19,750</td>
+                          <td>$20,300</td>
+                          <td>$20,400</td>
+                          <td>$21,100</td>
                           <td>
-                            <input type="text" class="form-control form-control-sm" value="116" />
+                            <a href=""><i class="fa-solid fa-xmark"></i></a>
                           </td>
                         </tr>
                         <tr>
-                          <td>RN-Bta-San Fernando</td>
+                          <th scope="row">Ford F-150</th>
+                          <td>Gasolina</td>
                           <td>
-                            <input type="text" class="form-control form-control-sm" value="10,00" />
+                            <input type="text" name="" id="" class="form-control form-control-sm" value="$21,000" />
                           </td>
                           <td>
-                            <input type="text" class="form-control form-control-sm" value="398" />
+                            <a href=""><i class="fa-solid fa-rotate"></i></a>
+                          </td>
+                          <td>$29,000</td>
+                          <td>$28,250</td>
+                          <td>$27,800</td>
+                          <td>$28,600</td>
+                          <td>$29,200</td>
+                          <td>$28,900</td>
+                          <td>$28,450</td>
+                          <td>$28,100</td>
+                          <td>$27,750</td>
+                          <td>$28,300</td>
+                          <td>$28,400</td>
+                          <td>$29,100</td>
+                          <td>
+                            <a href=""><i class="fa-solid fa-xmark"></i></a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">Tesla Model 3</th>
+                          <td>Eléctrico</td>
+                          <td>
+                            <input type="text" name="" id="" class="form-control form-control-sm" value="$21,000" />
                           </td>
                           <td>
-                            <input type="text" class="form-control form-control-sm" value="34" />
+                            <a href=""><i class="fa-solid fa-rotate"></i></a>
+                          </td>
+                          <td>$36,000</td>
+                          <td>$35,250</td>
+                          <td>$34,800</td>
+                          <td>$35,600</td>
+                          <td>$36,200</td>
+                          <td>$35,900</td>
+                          <td>$35,450</td>
+                          <td>$35,100</td>
+                          <td>$34,750</td>
+                          <td>$35,300</td>
+                          <td>$35,400</td>
+                          <td>$36,100</td>
+                          <td>
+                            <a href=""><i class="fa-solid fa-xmark"></i></a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">Chevrolet Bolt</th>
+                          <td>Eléctrico</td>
+                          <td>
+                            <input type="text" name="" id="" class="form-control form-control-sm" value="$21,000" />
+                          </td>
+                          <td>
+                            <a href=""><i class="fa-solid fa-rotate"></i></a>
+                          </td>
+                          <td>$37,000</td>
+                          <td>$36,750</td>
+                          <td>$36,200</td>
+                          <td>$36,900</td>
+                          <td>$37,400</td>
+                          <td>$37,000</td>
+                          <td>$36,800</td>
+                          <td>$36,600</td>
+                          <td>$36,300</td>
+                          <td>$36,100</td>
+                          <td>$36,500</td>
+                          <td>$37,200</td>
+                          <td>
+                            <a href=""><i class="fa-solid fa-xmark"></i></a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">Honda Civic</th>
+                          <td>Gasolina</td>
+                          <td>
+                            <input type="text" name="" id="" class="form-control form-control-sm" value="$21,000" />
+                          </td>
+                          <td>
+                            <a href=""><i class="fa-solid fa-rotate"></i></a>
+                          </td>
+                          <td>$23,000</td>
+                          <td>$22,250</td>
+                          <td>$21,800</td>
+                          <td>$22,600</td>
+                          <td>$23,200</td>
+                          <td>$22,900</td>
+                          <td>$22,450</td>
+                          <td>$22,100</td>
+                          <td>$21,750</td>
+                          <td>$22,300</td>
+                          <td>$22,400</td>
+                          <td>$23,100</td>
+                          <td>
+                            <a href=""><i class="fa-solid fa-xmark"></i></a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">Hyundai Kona</th>
+                          <td>Gasolina</td>
+                          <td>
+                            <input type="text" name="" id="" class="form-control form-control-sm" value="$21,000" />
+                          </td>
+                          <td>
+                            <a href=""><i class="fa-solid fa-rotate"></i></a>
+                          </td>
+                          <td>$24,000</td>
+                          <td>$23,750</td>
+                          <td>$23,200</td>
+                          <td>$23,900</td>
+                          <td>$24,400</td>
+                          <td>$24,100</td>
+                          <td>$23,800</td>
+                          <td>$23,600</td>
+                          <td>$23,300</td>
+                          <td>$23,100</td>
+                          <td>$23,200</td>
+                          <td>$24,000</td>
+                          <td>
+                            <a href=""><i class="fa-solid fa-xmark"></i></a>
                           </td>
                         </tr>
                       </tbody>
                     </table>
                   </div>
-                </div>
-                <div class="table-responsive">
-                  <table class="mt-3 table table-striped">
-                    <thead>
-                      <tr>
-                        <th scope="col">Referencia de Carro</th>
-                        <th scope="col">Tipo</th>
-                        <th scope="col">Precio 1</th>
-                        <th scope="col">Precio 2</th>
-                        <th scope="col">Precio 3</th>
-                        <th scope="col">Precio 4</th>
-                        <th scope="col">Precio 5</th>
-                        <th scope="col">Precio 6</th>
-                        <th scope="col">Precio 7</th>
-                        <th scope="col">Precio 8</th>
-                        <th scope="col">Precio 9</th>
-                        <th scope="col">Precio 10</th>
-                        <th scope="col">Precio 11</th>
-                        <th scope="col">Precio 12</th>
-                        <th scope="col">Precio 13</th>
-                        <th scope="col">Precio 14</th>
-                        <th scope="col">Eliminar</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row">Toyota Corolla</th>
-                        <td>Gasolina</td>
-                        <td>
-                          <input type="text" name="" id="" class="form-control form-control-sm" value="$21,000" />
-                        </td>
-                        <td>
-                          <a href=""><i class="fa-solid fa-rotate"></i></a>
-                        </td>
-                        <td>$21,000</td>
-                        <td>$20,250</td>
-                        <td>$19,800</td>
-                        <td>$20,600</td>
-                        <td>$21,200</td>
-                        <td>$20,900</td>
-                        <td>$20,450</td>
-                        <td>$20,100</td>
-                        <td>$19,750</td>
-                        <td>$20,300</td>
-                        <td>$20,400</td>
-                        <td>$21,100</td>
-                        <td>
-                          <a href=""><i class="fa-solid fa-xmark"></i></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="row">Ford F-150</th>
-                        <td>Gasolina</td>
-                        <td>
-                          <input type="text" name="" id="" class="form-control form-control-sm" value="$21,000" />
-                        </td>
-                        <td>
-                          <a href=""><i class="fa-solid fa-rotate"></i></a>
-                        </td>
-                        <td>$29,000</td>
-                        <td>$28,250</td>
-                        <td>$27,800</td>
-                        <td>$28,600</td>
-                        <td>$29,200</td>
-                        <td>$28,900</td>
-                        <td>$28,450</td>
-                        <td>$28,100</td>
-                        <td>$27,750</td>
-                        <td>$28,300</td>
-                        <td>$28,400</td>
-                        <td>$29,100</td>
-                        <td>
-                          <a href=""><i class="fa-solid fa-xmark"></i></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="row">Tesla Model 3</th>
-                        <td>Eléctrico</td>
-                        <td>
-                          <input type="text" name="" id="" class="form-control form-control-sm" value="$21,000" />
-                        </td>
-                        <td>
-                          <a href=""><i class="fa-solid fa-rotate"></i></a>
-                        </td>
-                        <td>$36,000</td>
-                        <td>$35,250</td>
-                        <td>$34,800</td>
-                        <td>$35,600</td>
-                        <td>$36,200</td>
-                        <td>$35,900</td>
-                        <td>$35,450</td>
-                        <td>$35,100</td>
-                        <td>$34,750</td>
-                        <td>$35,300</td>
-                        <td>$35,400</td>
-                        <td>$36,100</td>
-                        <td>
-                          <a href=""><i class="fa-solid fa-xmark"></i></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="row">Chevrolet Bolt</th>
-                        <td>Eléctrico</td>
-                        <td>
-                          <input type="text" name="" id="" class="form-control form-control-sm" value="$21,000" />
-                        </td>
-                        <td>
-                          <a href=""><i class="fa-solid fa-rotate"></i></a>
-                        </td>
-                        <td>$37,000</td>
-                        <td>$36,750</td>
-                        <td>$36,200</td>
-                        <td>$36,900</td>
-                        <td>$37,400</td>
-                        <td>$37,000</td>
-                        <td>$36,800</td>
-                        <td>$36,600</td>
-                        <td>$36,300</td>
-                        <td>$36,100</td>
-                        <td>$36,500</td>
-                        <td>$37,200</td>
-                        <td>
-                          <a href=""><i class="fa-solid fa-xmark"></i></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="row">Honda Civic</th>
-                        <td>Gasolina</td>
-                        <td>
-                          <input type="text" name="" id="" class="form-control form-control-sm" value="$21,000" />
-                        </td>
-                        <td>
-                          <a href=""><i class="fa-solid fa-rotate"></i></a>
-                        </td>
-                        <td>$23,000</td>
-                        <td>$22,250</td>
-                        <td>$21,800</td>
-                        <td>$22,600</td>
-                        <td>$23,200</td>
-                        <td>$22,900</td>
-                        <td>$22,450</td>
-                        <td>$22,100</td>
-                        <td>$21,750</td>
-                        <td>$22,300</td>
-                        <td>$22,400</td>
-                        <td>$23,100</td>
-                        <td>
-                          <a href=""><i class="fa-solid fa-xmark"></i></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="row">Hyundai Kona</th>
-                        <td>Gasolina</td>
-                        <td>
-                          <input type="text" name="" id="" class="form-control form-control-sm" value="$21,000" />
-                        </td>
-                        <td>
-                          <a href=""><i class="fa-solid fa-rotate"></i></a>
-                        </td>
-                        <td>$24,000</td>
-                        <td>$23,750</td>
-                        <td>$23,200</td>
-                        <td>$23,900</td>
-                        <td>$24,400</td>
-                        <td>$24,100</td>
-                        <td>$23,800</td>
-                        <td>$23,600</td>
-                        <td>$23,300</td>
-                        <td>$23,100</td>
-                        <td>$23,200</td>
-                        <td>$24,000</td>
-                        <td>
-                          <a href=""><i class="fa-solid fa-xmark"></i></a>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-                <div class="w-75 mb-2">
-                  <button class="btn bg-blue mt-2">
-                    <i class="fa-solid fa-circle-plus"></i> Adicionar
-                  </button>
+                  <div class="w-75 mb-2">
+                    <button class="btn bg-blue mt-2">
+                      <i class="fa-solid fa-circle-plus"></i> Adicionar
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
+            <!-- <div class="tab-pane fade" id="two" role="tabpanel" aria-labelledby="two-tab">Vehículos Usados</div>
+            <div class="tab-pane fade" id="three" role="tabpanel" aria-labelledby="three-tab">Repuestos</div>
+            <div class="tab-pane fade" id="four" role="tabpanel" aria-labelledby="four-tab">Servicios</div>
+            <div class="tab-pane fade" id="five" role="tabpanel" aria-labelledby="five-tab">Variables Macro y P&G</div> -->
           </div>
-          <!-- <div class="tab-pane fade" id="two" role="tabpanel" aria-labelledby="two-tab">Vehículos Usados</div>
-          <div class="tab-pane fade" id="three" role="tabpanel" aria-labelledby="three-tab">Repuestos</div>
-          <div class="tab-pane fade" id="four" role="tabpanel" aria-labelledby="four-tab">Servicios</div>
-          <div class="tab-pane fade" id="five" role="tabpanel" aria-labelledby="five-tab">Variables Macro y P&G</div> -->
-        </div>
-      </section>
-      <section class="mb-2">
-        <div class="row mt-1">
-          <div class="col-12 step">
-            <span>2 INFORMACIÓN CENTRO</span>
-          </div>
-        </div>
-      </section>
-      <section class="mb-2">
-        <div class="card">
-          <div class="row mb-3 mt-3">
-            <div class="col-md-4">
-              <label for="" class="form-label">Centro:</label>
-              <select class="form-select form-select-sm" name="point" id="point">
-                <option value="0">Seleccionar...</option>
-              </select>
+        </section>
+        <section class="mb-2">
+          <div class="row mt-1">
+            <div class="col-12 step">
+              <span>2 INFORMACIÓN CENTRO</span>
             </div>
           </div>
-        </div>
-      </section>
-      <hr />
+        </section>
+        <section class="mb-2">
+          <div class="card">
+            <div class="row mb-3 mt-3">
+              <div class="col-md-4">
+                <label for="" class="form-label">Centro:</label>
+                <select class="form-select form-select-sm" name="point" id="point">
+                  <option value="0">Seleccionar...</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </section>
+        <hr />
+      </div>
       <footer>
         <div class="text-center">
           <span>© 2024 - CASATORO - PSC - PLATAFORMA DE SERVICIOS COMPARTIDOS</span>
@@ -596,7 +598,6 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
-  <script src="./assets/js/main.js"></script>
 </body>
 
 </html>
